@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.33.1" theme-name="Stellar" theme-version="1.33.1">
   
-  <meta name="robots" content="noindex,follow">
+  
   <meta name="generator" content="Hexo 8.0.0">
   <meta http-equiv='x-dns-prefetch-control' content='on' />
   
@@ -17,14 +17,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000">
   <meta name="theme-color" content="#f9fafb">
-  <title>Tags - IIIIIIImperium的BLOG</title>
+  <title>IIIIIIImperium的BLOG</title>
 
   
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Tags">
-<meta property="og:url" content="https://iiiimperium.github.io/tags/">
+    <meta name="description" content="title: pwndbg基础  基本用法 (启动 GDB 与 pwndbg)  安装完成后，你只需像往常一样启动 GDB，pwndbg 就会自动加载并改变 GDB 的外观和行为。 启动 GDB： 调试可执行文件： gdb &lt;可执行文件路径&gt; 例如：gdb .&#x2F;a.out 附加到正在运行的进程： gdb -p &lt;进程ID&gt; 启动后的界面：一旦 GDB 启动，pw">
+<meta property="og:type" content="article">
+<meta property="og:title" content="IIIIIIImperium的BLOG">
+<meta property="og:url" content="https://iiiimperium.github.io/2025/10/12/pwndbg%E5%9F%BA%E7%A1%80/">
 <meta property="og:site_name" content="IIIIIIImperium的BLOG">
+<meta property="og:description" content="title: pwndbg基础  基本用法 (启动 GDB 与 pwndbg)  安装完成后，你只需像往常一样启动 GDB，pwndbg 就会自动加载并改变 GDB 的外观和行为。 启动 GDB： 调试可执行文件： gdb &lt;可执行文件路径&gt; 例如：gdb .&#x2F;a.out 附加到正在运行的进程： gdb -p &lt;进程ID&gt; 启动后的界面：一旦 GDB 启动，pw">
 <meta property="og:locale" content="zn_CN">
+<meta property="article:published_time" content="2025-10-12T13:41:02.077Z">
+<meta property="article:modified_time" content="2025-10-12T13:43:06.431Z">
 <meta property="article:author" content="IIIImperium">
 <meta name="twitter:card" content="summary">
   
@@ -42,12 +46,12 @@
 
   
 
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Website","@id":"https://iiiimperium.github.io","author":{"@type":"Person","name":"IIIImperium","sameAs":[]},"name":"IIIIIIImperium的BLOG","description":"","url":"https://iiiimperium.github.io"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"IIIImperium","sameAs":[]},"dateCreated":"2025-10-12T21:41:02+08:00","dateModified":"2025-10-12T21:43:06+08:00","datePublished":"2025-10-12T21:41:02+08:00","description":"","headline":"","mainEntityOfPage":{"@type":"WebPage","@id":"https://iiiimperium.github.io/2025/10/12/pwndbg%E5%9F%BA%E7%A1%80/"},"publisher":{"@type":"Organization","name":"IIIImperium","sameAs":[]},"url":"https://iiiimperium.github.io/2025/10/12/pwndbg%E5%9F%BA%E7%A1%80/","image":[]}</script>
   
 </head>
 <body>
 
-<div class="l_body index" id="start" layout="tags" type="undefined" ><aside class="l_left"><div class="sidebg"></div><div class="leftbar-container">
+<div class="l_body content" id="start" layout="post" type="tech" ><aside class="l_left"><div class="sidebg"></div><div class="leftbar-container">
 
 
 <header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="/images/01.jpg" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/"><div class="main">IIIIIIImperium的BLOG</div><div class="sub cap">欢迎</div></a></div></header>
@@ -59,28 +63,177 @@
 <div class="widgets">
 <div class="search-wrapper" id="search-wrapper"><form class="search-form"><a class="search-button" onclick="document.getElementById(&quot;search-input&quot;).focus();"><svg t="1705074644177" viewBox="0 0 1025 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1560" width="200" height="200"><path d="M1008.839137 935.96571L792.364903 719.491476a56.783488 56.783488 0 0 0-80.152866 0 358.53545 358.53545 0 1 1 100.857314-335.166073 362.840335 362.840335 0 0 1-3.689902 170.145468 51.248635 51.248635 0 1 0 99.217358 26.444296 462.057693 462.057693 0 1 0-158.255785 242.303546l185.930047 185.725053a51.248635 51.248635 0 0 0 72.568068 0 51.248635 51.248635 0 0 0 0-72.978056z" p-id="1561"></path><path d="M616.479587 615.969233a50.428657 50.428657 0 0 0-61.498362-5.534852 174.655348 174.655348 0 0 1-177.525271 3.484907 49.403684 49.403684 0 0 0-58.833433 6.76482l-3.074918 2.869923a49.403684 49.403684 0 0 0 8.609771 78.10292 277.767601 277.767601 0 0 0 286.992355-5.739847 49.403684 49.403684 0 0 0 8.404776-76.667958z" p-id="1562"></path></svg></a><input type="text" class="search-input" id="search-input" placeholder="Search"></form><div id="search-result"></div><div class="search-no-result">No Results!</div></div>
 
+
+
 <widget class="widget-wrapper slide-up recent post-list"><div class="widget-header dis-select"><span class="name">Recent Update</span></div><div class="widget-body fs14"><a class="item title" href="/2025/09/07/%E6%A0%BC%E5%BC%8F%E5%8C%96%E5%AD%97%E7%AC%A6%E4%B8%B2/"><span class="title">格式化自符串漏洞 week2</span></a><a class="item title" href="/2025/10/13/%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE/"><span class="title">基础解题思维导图</span></a><a class="item title" href="/2025/09/07/test/"><span class="title">BLOG sample</span></a><a class="item title" href="/2025/10/12/%E5%85%B3%E9%94%AE%E7%82%B9%E6%8D%95%E6%8D%89/"><span class="title">pwn部分关键点</span></a><a class="item title" href="/2025/10/12/c%E8%AF%AD%E8%A8%80%E6%BC%8F%E6%B4%9E/"><span class="title">C语言常见漏洞点</span></a><a class="item title" href="/2025/09/28/hello-world/"><span class="title">Hello World</span></a></div></widget>
 </div>
 <footer class="footer dis-select"><div class="social-wrap"><a class="social" href="/" rel="noopener noreferrer"><img src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/08a41b181ce68.svg"/></a><a class="social" href="/" rel="noopener noreferrer"><img src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/3845874.svg"/></a><a class="social" href="/" rel="noopener noreferrer"><img src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/3616429.svg"/></a><a class="social" href="/about/#comments" rel="noopener noreferrer"><img src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/942ebbf1a4b91.svg"/></a></div></footer>
 </div></aside><div class="l_main" id="main">
 
-<header class="header mobile-only"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="/images/01.jpg" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/"><div class="main">IIIIIIImperium的BLOG</div><div class="sub cap">欢迎</div></a></div></header>
 
 
-  
-  
-  
 
-<div class="navbar top"><div class="navbar-blur"><div class="navbar-container"><nav class="post"><a href="/">Recent</a><a href="/categories/">Categories</a><a class="active" href="/tags/">Tags</a><a href="/archives/">Archives</a></nav></div></div></div>
-  <div class='post-list'>
-    <article class='slide-up' id='tags'>
-      
-        <a class='tag' href="/tags/Recent/">
-          <span class='name'>Recent</span>
-        </a>
-      
-    </article>
+
+<div class="article banner slide-up top">
+  <div class="content">
+    <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">Home</a>
+<span class="sep"></span><a class="cap breadcrumb" href="/">Blog</a></div>
+<div class="flex-row" id="post-meta"><span class="text created">Posted on: <time datetime="2025-10-12T13:41:02.077Z">2025-10-12</time></span><span class="sep updated"></span><span class="text updated">Updated on: <time datetime="2025-10-12T13:43:06.431Z">2025-10-12</time></span></div></div></div>
+    
   </div>
+  </div><article class="md-text content slide-up"><hr>
+<p>title: pwndbg基础</p>
+<ol start="3">
+<li>基本用法 (启动 GDB 与 pwndbg)</li>
+</ol>
+<p>安装完成后，你只需像往常一样启动 GDB，pwndbg 就会自动加载并改变 GDB 的外观和行为。</p>
+<p>启动 GDB：</p>
+<p>调试可执行文件：</p>
+<p>gdb &lt;可执行文件路径&gt;</p>
+<p>例如：gdb .&#x2F;a.out</p>
+<p>附加到正在运行的进程：</p>
+<p>gdb -p &lt;进程ID&gt;</p>
+<p>启动后的界面：<br>一旦 GDB 启动，pwndbg 会立即接管并显示一个全新的界面，通常包括：</p>
+<p>Code (代码区): 当前程序计数器 (PC&#x2F;RIP&#x2F;EIP) 附近的汇编代码。</p>
+<p>Registers (寄存器区): 所有 CPU 寄存器的当前值。</p>
+<p>Stack (栈区): 当前栈帧中的数据，包括函数参数、局部变量和返回地址。</p>
+<p>Legend (图例): 颜色和符号的解释。</p>
+<ol start="4">
+<li>pwndbg 常用命令和功能</li>
+</ol>
+<p>pwndbg 增强了 GDB 的许多功能，并添加了大量自己的命令。你仍然可以使用所有的标准 GDB 命令。</p>
+<p>核心 GDB 命令（pwndbg 会美化其输出）</p>
+<p>r &#x2F; run：运行程序。</p>
+<p>start：在 main 函数处设置断点并运行，在 main 函数入口停止。</p>
+<p>b <location> &#x2F; break <location>：设置断点（例如：b main, b *0x400500, b function_name, b file.c:line_number）。</p>
+<p>c &#x2F; continue：继续执行直到下一个断点或程序结束。</p>
+<p>n &#x2F; next：执行下一行源代码（步过函数调用）。</p>
+<p>ni &#x2F; nexti：执行下一条汇编指令（步过函数调用）。</p>
+<p>s &#x2F; step：执行下一行源代码（步入函数调用）。</p>
+<p>si &#x2F; stepi：执行下一条汇编指令（步入函数调用）。</p>
+<p>info b &#x2F; info breakpoints：查看所有断点信息。</p>
+<p>x &#x2F;<N><F><U> <address>：查看内存内容。</p>
+<p>N (数量): 要显示的单位数量。</p>
+<p>F (格式): x (十六进制), d (十进制), i (指令), s (字符串), c (字符)。</p>
+<p>U (单位大小): b (字节), h (半字, 2字节), w (字, 4字节), g (巨字, 8字节)。</p>
+<p>示例：x &#x2F;20wx $rsp (查看栈顶 20 个 4 字节的十六进制值)。</p>
+<p>pwndbg 特有或增强的命令</p>
+<p>以下是 pwndbg 提供的一些最有用的命令：</p>
+<ol>
+<li>上下文和显示控制</li>
+</ol>
+<p>context：手动刷新并显示所有上下文信息（寄存器、栈、代码等）。</p>
+<p>telescope <address> &#x2F; tele <address>：以美观的格式递归地查看指针链所指向的内存内容，是 pwndbg 的明星命令之一。</p>
+<p>例如：tele $rsp (查看栈顶内容及其指向)。</p>
+<p>例如：tele <address> <count> (查看指定地址开始的 count 个 QWORD 的内容)。</p>
+<p>hexdump <address> [length]：以十六进制和 ASCII 形式显示内存内容。</p>
+<p>例如：hexdump $rsp 0x40。</p>
+<p>vmmap：显示内存映射（segments），类似于 cat &#x2F;proc&#x2F;<pid>&#x2F;maps。</p>
+<p>elfheader：显示当前模块的 ELF 头信息。</p>
+<p>main_arena：显示 malloc 的 main_arena 结构。</p>
+<ol start="2">
+<li>搜索和查找</li>
+</ol>
+<p>search <value> &#x2F; find <value>：在所有可读内存区域中搜索指定的值（字符串、整数、指针）。非常强大，可以快速定位内存中的数据。</p>
+<p>search “my_string”</p>
+<p>search 0xdeadbeef</p>
+<p>search &amp;my_variable (搜索变量的地址)</p>
+<p>search_gdb_history：搜索 GDB 历史命令。</p>
+<ol start="3">
+<li>栈分析</li>
+</ol>
+<p>stack &#x2F; st：显示当前栈帧的内容，通常与 context 中的栈视图一致。</p>
+<p>retaddr：尝试定位并显示当前函数的返回地址。</p>
+<p>canary：尝试找到并显示栈溢出保护（Canary）的值。</p>
+<ol start="4">
+<li>堆分析</li>
+</ol>
+<p>heap：显示堆块（chunks）的摘要信息。</p>
+<p>heap chunks：详细显示所有堆块的头部和数据。</p>
+<p>heap bins：显示各种 malloc 的 bin (tcache, fastbin, smallbin, largebin) 的内容。</p>
+<p>arena：显示 malloc_state 结构体（main_arena 或其他 arena）的详细信息。</p>
+<ol start="5">
+<li>实用工具</li>
+</ol>
+<p>rop &#x2F; ropgadget：在当前加载的模块中搜索 ROP gadget。</p>
+<p>ropgadget –depth <num> (指定搜索深度)。</p>
+<p>ropgadget –chain “<gadget1>; <gadget2>“ (尝试构建 ROP 链)。</p>
+<p>shellcode：提供了生成各种 shellcode 的功能（如 shellcode i386&#x2F;linux&#x2F;execve）。</p>
+<p>checksec：显示可执行文件的安全属性（ASLR, NX, Canary, PIE, RELRO）。</p>
+<p>disass &#x2F; disassemble：反汇编函数或代码区域。</p>
+<p>dumpargs：显示当前函数栈上的参数。</p>
+<p>sym &#x2F; symbol <name>：查找符号的地址。</p>
+<p>cyclic &#x2F; cyclic_find：用于生成和查找 Metasploit 风格的 Cyclic pattern，辅助确定栈溢出偏移。</p>
+<p>cyclic 100 (生成一个 100 字节的模式)。</p>
+<p>cyclic_find 0x61616161 (查找覆盖 EIP&#x2F;RIP 的模式值，确定偏移)。</p>
+<p>patch：在内存中打补丁（修改字节）。</p>
+<p>patch byte <address> <byte_value></p>
+<p>patch word <address> <word_value></p>
+<p>patch dword <address> <dword_value></p>
+<p>patch qword <address> <qword_value></p>
+<p>patch string <address> “new_string”</p>
+<ol start="6">
+<li>其他</li>
+</ol>
+<p>dump <filename> <start> <end>：将内存区域写入文件。</p>
+<p>load <filename> <address>：将文件内容加载到内存。</p>
+<p>highlight <address>：高亮显示某个地址的内存区域。</p>
+<p>reset_context：重置并刷新上下文显示。</p>
+<p>config：查看和修改 pwndbg 的配置选项。</p>
+<ol start="5">
+<li>pwndbg 常用工作流程示例</li>
+</ol>
+<p>假设你正在分析一个存在栈溢出的 CTF 二进制文件 pwnme。</p>
+<p>启动调试：</p>
+<p>gdb .&#x2F;pwnme</p>
+<p>pwndbg 会显示初始上下文。</p>
+<p>查看安全属性：</p>
+<p>checksec</p>
+<p>确认 ASLR, NX, Canary, PIE 等防护。</p>
+<p>设置断点并运行：</p>
+<p>b *main+<offset>  # 或 b vuln_function 等<br>r</p>
+<p>程序在断点处停止。</p>
+<p>查看栈和寄存器：<br>pwndbg 自动显示。你可以滚动查看 stack 区域，或者使用 telescope $rsp 深入查看。</p>
+<p>构造溢出数据 (如果发现栈溢出)：</p>
+<p>生成 Cyclic pattern：cyclic 200</p>
+<p>复制输出，并将其作为输入提供给程序：run &lt; (echo “output_from_cyclic”)</p>
+<p>程序崩溃后，pwndbg 会显示寄存器状态，特别是 RIP&#x2F;EIP 的值。</p>
+<p>查找偏移：cyclic_find &lt;RIP&#x2F;EIP的值&gt;，例如 cyclic_find 0x61616161。这将告诉你从输入开始到覆盖返回地址的字节数。</p>
+<p>构造 ROP 链 (如果需要绕过 NX)：</p>
+<p>rop 或 ropgadget 命令搜索 gadgets。</p>
+<p>利用 search 命令查找 system 函数、&#x2F;bin&#x2F;sh 字符串等关键地址。</p>
+<p>print system (GDB 命令) 可以直接获取函数地址。</p>
+<p>内存写入和修改：</p>
+<p>使用 patch 命令在调试时临时修改内存内容，例如 patch byte 0x400000 0x90。</p>
+<p>使用 set $reg &#x3D; <value> 修改寄存器值。</p>
+<p>查看内存映射：<br>vmmap 帮助你了解程序加载的模块和内存区域。</p>
+<ol start="6">
+<li>配置 pwndbg</li>
+</ol>
+<p>pwndbg 有许多可配置的选项，可以通过 config 命令查看和修改。</p>
+<p>config：显示所有配置选项及其当前值。</p>
+<p>config <option_name>：显示特定选项的详细信息。</p>
+<p>set <option_name> <value>：修改选项的值。</p>
+<p>例如：set context-sections code stack reg (只显示代码、栈和寄存器)。</p>
+<p>例如：set enable-colors off (关闭颜色)。</p>
+<p>你也可以将常用的配置写入你的 ~&#x2F;.gdbinit 文件中，例如：</p>
+<p>source ~&#x2F;pwndbg&#x2F;gdbinit.py<br>set context-sections code stack reg<br>set show-retaddr-hints off</p>
+</article>
+<div class="article-footer slide-up">
+    <section id="license">
+      <div class="header"><span>License</span></div>
+      <div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
+</div>
+    </section>
+    
+
+</div>
+
+<div class="related-wrap slide-up" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">Newer</div><a href="/2025/10/12/%E6%88%98%E9%98%9F%E5%85%B6/">2025-10-12</a></div><div class="item" id="next"><div class="note">Older</div><a href="/2025/10/12/c%E8%AF%AD%E8%A8%80%E6%BC%8F%E6%B4%9E/">C语言常见漏洞点</a></div></section></div>
+
+
+
+
 
 
 <footer class="page-footer slide-up footnote"><hr><div class="sitemap" style="column-count:4;"><div class="sitemap-group"><span class="fs15">博客</span><a href="/">近期发布</a><a href="/blog/categories/">分类</a><a href="/blog/tags/">标签</a><a href="/blog/archives/">归档</a></div></div><div class="text"><p>本站由 <a href="/">IIIImperium</a> 使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.33.1">Stellar 1.33.1</a> 主题创建。<br>本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>

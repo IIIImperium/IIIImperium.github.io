@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.33.1" theme-name="Stellar" theme-version="1.33.1">
   
-  <meta name="robots" content="noindex,follow">
+  
   <meta name="generator" content="Hexo 8.0.0">
   <meta http-equiv='x-dns-prefetch-control' content='on' />
   
@@ -17,20 +17,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000">
   <meta name="theme-color" content="#f9fafb">
-  <title>Tags - IIIIIIImperium的BLOG</title>
+  <title>格式化自符串漏洞 week2 - IIIIIIImperium的BLOG</title>
 
   
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Tags">
-<meta property="og:url" content="https://iiiimperium.github.io/tags/">
+    <meta name="description" content="第一部分实战难理解点断点信息 (Breakpoint printf)：Breakpoint printf：明确指出在 printf 函数处设置了一个断点。目的： 在关键函数（例如可能存在漏洞的 printf）处暂停程序执行，以便检查其输入和内部状态。 x$rbp-0x8：这是一个 GDB 命令，用于查看 rbp-0x8 地址的内存内容。 栈视图 (0x7fffffffdba8: 0x00007f">
+<meta property="og:type" content="article">
+<meta property="og:title" content="格式化自符串漏洞 week2">
+<meta property="og:url" content="https://iiiimperium.github.io/2025/09/07/%E6%A0%BC%E5%BC%8F%E5%8C%96%E5%AD%97%E7%AC%A6%E4%B8%B2/">
 <meta property="og:site_name" content="IIIIIIImperium的BLOG">
+<meta property="og:description" content="第一部分实战难理解点断点信息 (Breakpoint printf)：Breakpoint printf：明确指出在 printf 函数处设置了一个断点。目的： 在关键函数（例如可能存在漏洞的 printf）处暂停程序执行，以便检查其输入和内部状态。 x$rbp-0x8：这是一个 GDB 命令，用于查看 rbp-0x8 地址的内存内容。 栈视图 (0x7fffffffdba8: 0x00007f">
 <meta property="og:locale" content="zn_CN">
+<meta property="article:published_time" content="2025-09-07T15:28:47.000Z">
+<meta property="article:modified_time" content="2025-10-13T16:24:44.575Z">
 <meta property="article:author" content="IIIImperium">
-<meta name="twitter:card" content="summary">
+<meta property="article:tag" content="Recent">
+<meta name="twitter:card" content="summary_large_image">
   
   
   
-  
+  <meta name="keywords" content="Recent">
 
   <!-- feed -->
   
@@ -42,12 +47,12 @@
 
   
 
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Website","@id":"https://iiiimperium.github.io","author":{"@type":"Person","name":"IIIImperium","sameAs":[]},"name":"IIIIIIImperium的BLOG","description":"","url":"https://iiiimperium.github.io"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"IIIImperium","sameAs":[]},"dateCreated":"2025-09-07T23:28:47+08:00","dateModified":"2025-10-14T00:24:44+08:00","datePublished":"2025-09-07T23:28:47+08:00","description":"","headline":"格式化自符串漏洞 week2","mainEntityOfPage":{"@type":"WebPage","@id":"https://iiiimperium.github.io/2025/09/07/%E6%A0%BC%E5%BC%8F%E5%8C%96%E5%AD%97%E7%AC%A6%E4%B8%B2/"},"publisher":{"@type":"Organization","name":"IIIImperium","sameAs":[]},"url":"https://iiiimperium.github.io/2025/09/07/%E6%A0%BC%E5%BC%8F%E5%8C%96%E5%AD%97%E7%AC%A6%E4%B8%B2/","keywords":"Recent","thumbnailUrl":"/images/02.png","image":1}</script>
   
 </head>
 <body>
 
-<div class="l_body index" id="start" layout="tags" type="undefined" ><aside class="l_left"><div class="sidebg"></div><div class="leftbar-container">
+<div class="l_body content" id="start" layout="post" type="tech" ><aside class="l_left"><div class="sidebg"></div><div class="leftbar-container">
 
 
 <header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="/images/01.jpg" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/"><div class="main">IIIIIIImperium的BLOG</div><div class="sub cap">欢迎</div></a></div></header>
@@ -59,34 +64,68 @@
 <div class="widgets">
 <div class="search-wrapper" id="search-wrapper"><form class="search-form"><a class="search-button" onclick="document.getElementById(&quot;search-input&quot;).focus();"><svg t="1705074644177" viewBox="0 0 1025 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1560" width="200" height="200"><path d="M1008.839137 935.96571L792.364903 719.491476a56.783488 56.783488 0 0 0-80.152866 0 358.53545 358.53545 0 1 1 100.857314-335.166073 362.840335 362.840335 0 0 1-3.689902 170.145468 51.248635 51.248635 0 1 0 99.217358 26.444296 462.057693 462.057693 0 1 0-158.255785 242.303546l185.930047 185.725053a51.248635 51.248635 0 0 0 72.568068 0 51.248635 51.248635 0 0 0 0-72.978056z" p-id="1561"></path><path d="M616.479587 615.969233a50.428657 50.428657 0 0 0-61.498362-5.534852 174.655348 174.655348 0 0 1-177.525271 3.484907 49.403684 49.403684 0 0 0-58.833433 6.76482l-3.074918 2.869923a49.403684 49.403684 0 0 0 8.609771 78.10292 277.767601 277.767601 0 0 0 286.992355-5.739847 49.403684 49.403684 0 0 0 8.404776-76.667958z" p-id="1562"></path></svg></a><input type="text" class="search-input" id="search-input" placeholder="Search"></form><div id="search-result"></div><div class="search-no-result">No Results!</div></div>
 
+
+
 <widget class="widget-wrapper slide-up recent post-list"><div class="widget-header dis-select"><span class="name">Recent Update</span></div><div class="widget-body fs14"><a class="item title" href="/2025/09/07/%E6%A0%BC%E5%BC%8F%E5%8C%96%E5%AD%97%E7%AC%A6%E4%B8%B2/"><span class="title">格式化自符串漏洞 week2</span></a><a class="item title" href="/2025/10/13/%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE/"><span class="title">基础解题思维导图</span></a><a class="item title" href="/2025/09/07/test/"><span class="title">BLOG sample</span></a><a class="item title" href="/2025/10/12/%E5%85%B3%E9%94%AE%E7%82%B9%E6%8D%95%E6%8D%89/"><span class="title">pwn部分关键点</span></a><a class="item title" href="/2025/10/12/c%E8%AF%AD%E8%A8%80%E6%BC%8F%E6%B4%9E/"><span class="title">C语言常见漏洞点</span></a><a class="item title" href="/2025/09/28/hello-world/"><span class="title">Hello World</span></a></div></widget>
 </div>
 <footer class="footer dis-select"><div class="social-wrap"><a class="social" href="/" rel="noopener noreferrer"><img src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/08a41b181ce68.svg"/></a><a class="social" href="/" rel="noopener noreferrer"><img src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/3845874.svg"/></a><a class="social" href="/" rel="noopener noreferrer"><img src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/3616429.svg"/></a><a class="social" href="/about/#comments" rel="noopener noreferrer"><img src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/942ebbf1a4b91.svg"/></a></div></footer>
 </div></aside><div class="l_main" id="main">
 
-<header class="header mobile-only"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="/images/01.jpg" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/"><div class="main">IIIIIIImperium的BLOG</div><div class="sub cap">欢迎</div></a></div></header>
 
 
-  
-  
-  
 
-<div class="navbar top"><div class="navbar-blur"><div class="navbar-container"><nav class="post"><a href="/">Recent</a><a href="/categories/">Categories</a><a class="active" href="/tags/">Tags</a><a href="/archives/">Archives</a></nav></div></div></div>
-  <div class='post-list'>
-    <article class='slide-up' id='tags'>
+
+<div class="article banner slide-up top">
+  <div class="content">
+    <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">Home</a>
+<span class="sep"></span><a class="cap breadcrumb" href="/">Blog</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/Recent/">Recent</a></div>
+<div class="flex-row" id="post-meta"><span class="text created">Posted on: <time datetime="2025-09-07T15:28:47.000Z">2025-09-07</time></span><span class="sep updated"></span><span class="text updated">Updated on: <time datetime="2025-10-13T16:24:44.575Z">2025-10-14</time></span></div></div></div>
+    
+    <div class="bottom only-title">
       
-        <a class='tag' href="/tags/Recent/">
-          <span class='name'>Recent</span>
-        </a>
-      
-    </article>
+      <div class="text-area">
+        <h1 class="text title"><span>格式化自符串漏洞 week2</span></h1>
+        
+      </div>
+    </div>
+    
   </div>
+  </div><article class="md-text content slide-up"><span id="more"></span>
+<h2 id="第一部分"><a href="#第一部分" class="headerlink" title="第一部分"></a>第一部分</h2><h3 id="实战难理解点"><a href="#实战难理解点" class="headerlink" title="实战难理解点"></a>实战难理解点</h3><p>断点信息 (Breakpoint printf)：<br>Breakpoint printf：明确指出在 printf 函数处设置了一个断点。<br>目的： 在关键函数（例如可能存在漏洞的 printf）处暂停程序执行，以便检查其输入和内部状态。<br> <div class="tag-plugin colorful note" color="yellow"><div class="title">x</div><div class="body"><p>$rbp-0x8</p></div></div>：这是一个 GDB 命令，用于查看 rbp-0x8 地址的内存内容。</p>
+<p>栈视图 (0x7fffffffdba8: 0x00007fffff77c2 … 部分)：<br>这部分是 pwndbg 栈视图的核心，通常通过 <mark class="tag-plugin colorful mark" color="yellow">x/50xg $rsp (查看栈顶向下 50 个 8字节的十六进制值)</mark> 这样的命令触发。<br>每一行显示一个内存地址及其对应的 8 字节（QWORD）内容。</p>
+<p>0x61616161 是 ‘aaaa’ 的 ASCII 值，这强烈暗示用户正在尝试通过输入 aaaa 来寻找在栈上的偏移。</p>
+<emp>重要： 如果程序在读取输入后立即打印，那么栈上的布局将是：输入字符串 -> 局部变量 -> Canary -> 保存的基指针 (RBP) -> 返回地址。</emp>
+
+<p>在 0x7fffffffdc78 处有一个红色的 0xd712c42fdf065600。这个红色标记的 8 字节随机值非常可疑！这很可能就是栈 Canary 的值。 Canary 通常是一个 QWORD (8 字节) 随机数。</p>
+<p>0x7fffffffdc78 - 0x7fffffffdc00 会直接执行十六进制减法，并默认以十进制显示结果（120）。<br>hex() 函数可以将十进制整数转换回十六进制字符串表示，方便我们查看结果 0x78。</p>
+<p>64位程序填充时加8：距离栈顶部分单独填充</p>
+</article>
+<div class="article-footer slide-up">
+    <section id="license">
+      <div class="header"><span>License</span></div>
+      <div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
+</div>
+    </section>
+    
+
+</div>
+
+<div class="related-wrap slide-up" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">Newer</div><a href="/2025/09/07/test/">BLOG sample</a></div><div class="item" id="next"></div></section></div>
+
+
+
+
 
 
 <footer class="page-footer slide-up footnote"><hr><div class="sitemap" style="column-count:4;"><div class="sitemap-group"><span class="fs15">博客</span><a href="/">近期发布</a><a href="/blog/categories/">分类</a><a href="/blog/tags/">标签</a><a href="/blog/archives/">归档</a></div></div><div class="text"><p>本站由 <a href="/">IIIImperium</a> 使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.33.1">Stellar 1.33.1</a> 主题创建。<br>本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
 </div></footer>
 <div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right">
-</aside><div class='float-panel'>
+<div class="widgets">
+
+
+
+<widget class="widget-wrapper slide-up toc" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">On This Page</span><a class="cap-action" onclick="sidebar.toggleTOC()" ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86"><span class="toc-text">第一部分</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E6%88%98%E9%9A%BE%E7%90%86%E8%A7%A3%E7%82%B9"><span class="toc-text">实战难理解点</span></a></li></ol></li></ol></div><div class="widget-footer"><a class="top" onclick="util.scrollTop()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><!-- Icon from Solar by 480 Design - https://creativecommons.org/licenses/by/4.0/ --><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"><path stroke-linejoin="round" d="m9 15.5l3-3l3 3m-6-4l3-3l3 3"/><path d="M7 3.338A9.95 9.95 0 0 1 12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12c0-1.821.487-3.53 1.338-5"/></g></svg><span>Scroll to Top</span></a></div></widget>
+</div></aside><div class='float-panel'>
   <button type='button' style='display:none' class='laptop-only rightbar-toggle mobile' onclick='sidebar.rightbar()'>
     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg>
   </button>
